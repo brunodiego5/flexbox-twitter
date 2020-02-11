@@ -22,15 +22,20 @@ button {
 
 /*deixar os elementos no centro*/
 .content {
-  max-width: 1170px; /*culpará esta largura máxima*/
+  max-width: 1170px; /*oculpará esta largura máxima*/
   margin: 0 auto;
   padding: 0 30px; /*sempre terá uma margin, os elementos não iram "grudar" na borda*/
 }
 
+/*******************************   HEADER   ***********************************/
 header#main-header {
   height: 46px; /*altura fixa*/
   background: #fff; /*cor branca*/
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); /*sombra no header*/
+
+  /*para o header ficar sobre o banner e nao perder o box-shadow*/
+  position: relative;
+  z-index: 1;
 }
 
 header#main-header .content {
@@ -103,4 +108,101 @@ header#main-header div.side input {
   color: #667581;
   font-size: 12px;
   background: #f5f8fa url('/images/search.svg') no-repeat 190px center;
+}
+
+/*******************************   BANNER   ***********************************/
+
+div.banner {
+  height: 380px;
+  width: 100%;
+  background: #3bb9e3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+div.banner h1 {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/*******************************   BAR   ***********************************/
+
+div.bar {
+  height: 59px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+div.bar .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 285px; /*colocar uma margem a esquerda*/
+  height: 100%; /*o content oculpar 100% da altura da div bar*/
+}
+
+div.bar .content ul {
+ display: flex;
+ list-style: none; 
+ height: 100%; /*o ul oculpar 100% da altura da div content*/
+}
+
+div.bar .content ul li {
+  display: flex;
+  flex-direction: column; /*os elementos do item da lista ficarão em coluna*/
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  position: relative;
+}
+
+div.bar .content ul li.active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #3bb9e3;
+}
+
+div.bar .content ul li span {
+  color: #667580;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+div.bar .content ul li strong {
+  color: #667580;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 2px; /*margem do strong em relação ao span*/
+}
+
+div.bar .content ul li.active strong {
+  color: #3bb9e3;
+}
+
+div.bar .content .actions {
+ display: flex;
+}
+
+div.bar .content .actions button {
+  height: 34px;
+  background: #fff;
+  /*alinhar o texto ao centro*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #3bb9e3;
+  border: 1px solid #3bb9e3; /*retira a borda do botão*/
+  border-radius: 16px;
+  margin-right: 20px;
 }
