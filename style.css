@@ -1,0 +1,106 @@
+/*icones: iconfinder, iconscout, thenounproject*/
+
+/*reset nos componentes*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e6ecf0;
+  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  text-rendering: optimizeLegibility !important; /*melhora render das fontes, important para sobrepor*/ 
+  -webkit-font-smoothing: antialiased !important;
+
+}
+
+input, 
+button {
+  outline: 0;
+}
+
+/*deixar os elementos no centro*/
+.content {
+  max-width: 1170px; /*culpará esta largura máxima*/
+  margin: 0 auto;
+  padding: 0 30px; /*sempre terá uma margin, os elementos não iram "grudar" na borda*/
+}
+
+header#main-header {
+  height: 46px; /*altura fixa*/
+  background: #fff; /*cor branca*/
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); /*sombra no header*/
+}
+
+header#main-header .content {
+  /*sempre ficar no elemento pai*/
+  display: flex;
+  flex-direction: row; /*default*/
+  align-items: center;
+  justify-content: space-between;
+  height: 100%; /*oculpar toda a altura do header*/
+}
+
+header#main-header nav ul{
+  display: flex; /*alinhar na horizontal*/
+  list-style: none; /*retira a marcação da list*/
+}
+
+header#main-header nav ul li{ 
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+  color: #667580;
+  font-weight: bold;
+
+  margin-left: 30px;
+}
+
+header#main-header nav ul li:first-child{ 
+  margin: 0; /*retira a margim do primeiro item da lista*/
+}
+
+header#main-header nav ul li img{ 
+  margin-right: 7px; /*margem de 7px na img a direita*/
+}
+
+header#main-header div.side {
+  display: flex; /*extender para caber todos os elementos*/
+}
+
+header#main-header div.side img {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%; /*totalmente redondo*/
+  margin: 0 15px;
+}
+
+header#main-header div.side button {
+  height: 34px;
+  background: #3bb9e3;
+
+  /*alinhar o texto ao centro*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  border: 0; /*retira a borda do botão*/
+  border-radius: 16px;
+}
+
+header#main-header div.side input {
+  width: 220px;
+  border: 1px solid #e6ecf0;
+  height: 34px;
+  padding: 0 30px 0 12px; /*deixa o placeholder com margem*/
+  border-radius: 16px;
+  color: #667581;
+  font-size: 12px;
+  background: #f5f8fa url('/images/search.svg') no-repeat 190px center;
+}
